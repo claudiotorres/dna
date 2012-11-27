@@ -1,0 +1,8 @@
+<tr>
+  <td>[ <%= option.name %> ]</td>
+  <td> - </td>
+  <td>[<%= option.description %>]</td>
+  <td><%= link_to 'Show', [option.question, option] %></td>
+  <td><%= link_to 'Edit', edit_option_path(option) %></td>
+  <td><%= link_to 'Delete', [option.question, option], :confirm => 'Are you sure?', :method => :delete %></td>
+</tr>

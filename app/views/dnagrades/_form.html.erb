@@ -1,0 +1,57 @@
+<%= form_for(@dnagrade) do |f| %>
+  <% if @dnagrade.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dnagrade.errors.count, "error") %> prohibited this dnagrade from being saved:</h2>
+
+      <ul>
+      <% @dnagrade.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :general %><br />
+    <%= f.number_field :general %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.number_field :content %>
+  </div>
+  <div class="field">
+    <%= f.label :social %><br />
+    <%= f.number_field :social %>
+  </div>
+  <div class="field">
+    <%= f.label :mailing %><br />
+    <%= f.number_field :mailing %>
+  </div>
+  <div class="field">
+    <%= f.label :viral %><br />
+    <%= f.number_field :viral %>
+  </div>
+  <div class="field">
+    <%= f.label :advertise %><br />
+    <%= f.number_field :advertise %>
+  </div>
+  <div class="field">
+    <%= f.label :research %><br />
+    <%= f.number_field :research %>
+  </div>
+  <div class="field">
+    <%= f.label :monitoring %><br />
+    <%= f.number_field :monitoring %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br />
+    <%= f.datetime_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :dnatest %><br />
+    <%= f.text_field :dnatest %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

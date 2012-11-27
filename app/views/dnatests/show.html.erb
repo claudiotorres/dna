@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @dnatest.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @dnatest.description %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @dnatest.date %>
+</p>
+
+<p>
+  <b>Site:</b>
+  <%= @dnatest.site %>
+</p>
+
+
+<%= link_to 'Edit', edit_dnatest_path(@dnatest) %> |
+<%= link_to 'Back', dnatests_path %>

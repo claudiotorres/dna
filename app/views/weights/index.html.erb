@@ -1,0 +1,27 @@
+<h1>Listing weights</h1>
+
+<table>
+  <tr>
+    <th>Strategyid</th>
+    <th>Value</th>
+    <th>Option</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @weights.each do |weight| %>
+  <tr>
+    <td><%= weight.strategyid %></td>
+    <td><%= weight.value %></td>
+    <td><%= weight.option %></td>
+    <td><%= link_to 'Show', weight %></td>
+    <td><%= link_to 'Edit', edit_weight_path(weight) %></td>
+    <td><%= link_to 'Destroy', weight, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Weight', new_weight_path %>

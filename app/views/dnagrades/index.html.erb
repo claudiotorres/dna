@@ -1,0 +1,41 @@
+<h1>Listing dnagrades</h1>
+
+<table>
+  <tr>
+    <th>General</th>
+    <th>Content</th>
+    <th>Social</th>
+    <th>Mailing</th>
+    <th>Viral</th>
+    <th>Advertise</th>
+    <th>Research</th>
+    <th>Monitoring</th>
+    <th>Date</th>
+    <th>Dnatest</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @dnagrades.each do |dnagrade| %>
+  <tr>
+    <td><%= dnagrade.general %></td>
+    <td><%= dnagrade.content %></td>
+    <td><%= dnagrade.social %></td>
+    <td><%= dnagrade.mailing %></td>
+    <td><%= dnagrade.viral %></td>
+    <td><%= dnagrade.advertise %></td>
+    <td><%= dnagrade.research %></td>
+    <td><%= dnagrade.monitoring %></td>
+    <td><%= dnagrade.date %></td>
+    <td><%= dnagrade.dnatest %></td>
+    <td><%= link_to 'Show', dnagrade %></td>
+    <td><%= link_to 'Edit', edit_dnagrade_path(dnagrade) %></td>
+    <td><%= link_to 'Destroy', dnagrade, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Dnagrade', new_dnagrade_path %>
