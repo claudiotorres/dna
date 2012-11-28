@@ -10,56 +10,44 @@
   <tr>
     <td colspan="3" align="left" valign="top">
       <%= image_tag "quest_05.gif", :size => "166x31" %></td>
-    <td colspan="2" align="left" valign="top" class="page_title">Gathering stuffs...</td>
+    <td colspan="2" align="left" valign="top" class="page_title"><%= @question.name %></td>
   </tr>
   <tr>
     <td colspan="5">&nbsp;</td>
   </tr>
   <tr>
-    <td colspan="5" align="left" valign="top"><span class="page_title_white">Question 02</span> <span class="page_title">of 10</span></td>
+    <td colspan="5" align="left" valign="top"><span class="page_title_white">Question <%= @progress %></span> <span class="page_title">of <%= @total_questions %></span></td>
   </tr>
   <tr>
     <td colspan="5" align="left" valign="top">
       <%= image_tag "spacer.gif", :size => "100x8" %></td>
   </tr>
   <tr>
-    <td colspan="5" align="left" valign="top" class="text_large">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</td>
+    <td colspan="5" align="left" valign="top" class="text_large"><%= @question.description %></td>
   </tr>
   <tr>
-    <td height="173" colspan="5"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
-      <tr>
-        <td width="4%"><span class="text_large_bold">
-		      <input type="checkbox" name="checkbox" id="checkbox">
+    <td height="173" colspan="5">
+      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+
+        <% @option.each do |opt| %>
+            <tr>
+              <td width="4%"><span class="text_large_bold">
+		      <input type="checkbox" name=<%= "checkbox" + String(opt)  %> id=<%= "checkbox" + String(opt) %>>
 		      </span></td>
-        <td width="2%">&nbsp;</td>
-        <td width="94%"><label for="checkbox"></label>
-          <span class="text_medium_bold"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolorim ad minim. </span></td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td><span class="text_large_bold">
-		      <input type="checkbox" name="checkbox2" id="checkbox2">
-		      </span></td>
-        <td>&nbsp;</td>
-        <td class="text_medium"><span class="text_medium">Ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </span></td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td class="text_medium">&nbsp;</td>
-      </tr>
-      <tr>
-        <td><span class="text_large_bold">
-		      <input type="checkbox" name="checkbox3" id="checkbox3">
-		      </span></td>
-        <td>&nbsp;</td>
-        <td class="text_medium"><span class="text_medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </span></td>
-      </tr>
-    </table></td>
+              <td width="2%">&nbsp;</td>
+              <td width="94%"><label for="checkbox"></label>
+                <span class="text_medium_bold"> <%= opt.description %> </span></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+
+        <% end %>
+
+      </table>
+    </td>
   </tr>
   <tr>
     <td colspan="4">&nbsp;</td>
@@ -77,12 +65,12 @@
       <tr>
         <% for i in 1..10  %>
             <td height="8" class=
-              <% if @progress >= i %>
-                    <%= "progress_bar_full" %>
-                    <% else %>
-                    <%= "progress_bar_unfill" %>
-                    <% end %>
-            <%= image_tag "spacer.gif", :size =>  "60x8"%></td>
+              <% if ((10 * @progress) / @total_questions) >= i  %>
+                  <%= "progress_bar_full" %>
+              <% else %>
+                  <%= "progress_bar_unfill" %>
+              <% end %>
+                      <%= image_tag "spacer.gif", :size =>  "60x8"%></td>
         <%   end     %>
       </tr>
     </table></td>

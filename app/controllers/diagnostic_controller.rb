@@ -1,22 +1,28 @@
 class DiagnosticController < ApplicationController
 
-  # GET /diagnostic
-  def index
-
-    @progress = 1
-    render "show"
-
-  end
-
   # GET /diagnostic/1
   def show
 
-    @progress = Integer params[:id]
+    question_id =  Integer params[:id]
 
-    if @progress > 10
-     redirect_to :controller => "result"
+    @evaluation = Evaluation.first
+
+    @total_questions = @evaluation.questions.count
+
+    #if @evaluation.questions.where('questions.order = ?' , question_id ).exists?
+    if question_id <= @total_questions
+
+    @question = @evaluation.questions.where('questions.order = ?' , question_id ).first
+    @option = @question.options.all
+    @progress = question_id
+
+    else
+        redirect_to :controller => "result"
     end
+
 
   end
 
 end
+
+

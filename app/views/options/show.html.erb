@@ -1,20 +1,38 @@
+<h1>Evaluation(<%= @option.question.evaluation.order %>): <%= @option.question.evaluation.name %></h1>
+<h1>Question(<%= @option.question.order %>): <%= @option.question.name %></h1>
+<h1>Option(<%= @option.order %>): <%= @option.name %></h1>
+<h2><%= @option.description %></h2>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @option.name %>
-</p>
+<h2>Weights</h2>
 
-<p>
-  <b>Description:</b>
-  <%= @option.description %>
-</p>
+<%= render @option.weights %>
 
-<p>
-  <b>Question:</b>
-  <%= @option.question %>
-</p>
+<h2>Add a Strategy Weight:</h2>
+<%= form_for([@option, @option.weights.build]) do |f| %>
+    <table align="center" valign="middle" class="text_large">
+      <tr>
+        <td valign="top">
+          <div class="field">
+            <%= f.label :strategyid %><br />
+            <%= f.text_field :strategyid %>
+          </div>
+        </td>
+        <td>
+          <div class="field">
+            <%= f.label :value %><br />
+            <%= f.number_field :value %>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
 
-
-<%= link_to 'Edit', edit_option_path(@option) %> |
-<%= link_to 'Back', options_path %>
+<div class="admin_footer">
+  <%= link_to 'Edit', edit_option_path(@option) %> |
+  <%= link_to 'Back', questions_path %>
+</div>

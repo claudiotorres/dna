@@ -1,20 +1,13 @@
+<h1>Evaluation(<%= @weight.option.question.evaluation.order %>): <%= @weight.option.question.evaluation.name %></h1>
+<h1>Question(<%= @weight.option.question.order %>): <%= @weight.option.question.name %></h1>
+<h1>Option(<%= @weight.option.order %>): <%= @weight.option.name %></h1>
+<h2>Strategy <%= @weight.strategyid %> = <%= @weight.value %></h2>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Strategyid:</b>
-  <%= @weight.strategyid %>
-</p>
-
-<p>
-  <b>Value:</b>
-  <%= @weight.value %>
-</p>
-
-<p>
-  <b>Option:</b>
-  <%= @weight.option %>
-</p>
+<div class="admin_footer">
+  <%= link_to 'Edit', edit_option_weight_path(@option) %> |
+  <%= link_to 'Back', option_weight_path %>
+</div>
 
 
-<%= link_to 'Edit', edit_weight_path(@weight) %> |
-<%= link_to 'Back', weights_path %>

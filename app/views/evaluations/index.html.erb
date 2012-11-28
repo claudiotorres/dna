@@ -1,6 +1,6 @@
 <h1>Listing evaluations</h1>
 
-<table>
+<table align="center" valign="middle" class="text_large">
   <tr>
     <th>Name</th>
     <th>Description</th>
@@ -11,6 +11,7 @@
 
 <% @evaluations.each do |evaluation| %>
   <tr>
+    <td><%= evaluation.order %></td>
     <td><%= evaluation.name %></td>
     <td><%= evaluation.description %></td>
     <td><%= link_to 'Show', evaluation %></td>
@@ -22,4 +23,6 @@
 
 <br />
 
-<%= link_to 'New Evaluation', new_evaluation_path %>
+<div class="admin_footer">
+  <%= link_to 'New Evaluation', new_evaluation_path %>
+</div>

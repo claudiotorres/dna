@@ -1,40 +1,42 @@
+<h1>Evaluation(<%= @question.evaluation.order %>): <%= @question.evaluation.name %></h1>
+<h1>Question(<%= @question.order%>): <%= @question.name %></h1>
+<h2><%= @question.description %></h2>
+
 <p id="notice"><%= notice %></p>
-
-<p>
-  <b>Evaluation:</b>
-  <%= @question.evaluation.name %>
-</p>
-
-<p>
-  <b>Question:</b>
-  <%= @question.name %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @question.description %>
-</p>
 
 <h2>Options</h2>
 
 <%= render @question.options %>
 
 <h2>Add a Option:</h2>
-
 <%= form_for([@question, @question.options.build]) do |f| %>
-    <div class="field">
-      <%= f.label :name %><br />
-      <%= f.text_field :name %>
-    </div>
-    <div class="field">
-      <%= f.label :description %><br />
-      <%= f.text_area :description %>
-    </div>
+    <table align="center" valign="middle" class="text_large">
+      <tr>
+        <td valign="top">
+          <div class="field">
+            <%= f.label :order %><br />
+            <%= f.text_field :order %>
+          </div>
+          <div class="field">
+            <%= f.label :name %><br />
+            <%= f.text_field :name %>
+          </div>
+        </td>
+        <td>
+          <div class="field">
+            <%= f.label :description %><br />
+            <%= f.text_area :description %>
+          </div>
+        </td>
+      </tr>
+    </table>
     <div class="actions">
       <%= f.submit %>
     </div>
-
 <% end %>
 
-<%= link_to 'Edit', edit_question_path(@question) %> |
-<%= link_to 'Back', questions_path %>
+<div class="admin_footer">
+  <%= link_to 'Edit', edit_question_path(@question) %> |
+  <%= link_to 'Back', questions_path %>
+</div>
+

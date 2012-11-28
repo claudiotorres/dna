@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121126120805) do
+ActiveRecord::Schema.define(:version => 20121128150811) do
 
   create_table "advices", :force => true do |t|
     t.string   "name"
@@ -89,6 +89,7 @@ ActiveRecord::Schema.define(:version => 20121126120805) do
     t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "order"
   end
 
   create_table "features", :force => true do |t|
@@ -107,6 +108,7 @@ ActiveRecord::Schema.define(:version => 20121126120805) do
     t.integer  "question_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "order"
   end
 
   add_index "options", ["question_id"], :name => "index_options_on_question_id"
@@ -127,6 +129,7 @@ ActiveRecord::Schema.define(:version => 20121126120805) do
     t.integer  "evaluation_id"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.integer  "order"
   end
 
   add_index "questions", ["evaluation_id"], :name => "index_questions_on_evaluation_id"

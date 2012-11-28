@@ -1,9 +1,13 @@
-    <tr>
+<table align="center" valign="middle" class="text_large">
+  <tr>
+      <td>[ <%= question.order %> ]</td>
+      <td> - </td>
       <td>[ <%= question.name %> ]</td>
       <td> - </td>
       <td>[<%= question.description %>]</td>
       <td><%= link_to 'Show', [question.evaluation, question] %></td>
-      <td><%= link_to 'Edit', edit_question_path(question) %></td>
+      <td><%= link_to 'Edit', edit_evaluation_question_path(question) %></td>
       <td><%= link_to 'Delete', [question.evaluation, question], :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
+  </tr>
+</table>
 

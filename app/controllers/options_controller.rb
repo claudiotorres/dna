@@ -64,7 +64,6 @@ class OptionsController < ApplicationController
   # DELETE /options/1
   # DELETE /options/1.json
   def destroy
-
     @question = Question.find(params[:question_id])
     @option = @question.options.find(params[:id])
     @option.destroy

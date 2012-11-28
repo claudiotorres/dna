@@ -40,17 +40,9 @@ class WeightsController < ApplicationController
   # POST /weights
   # POST /weights.json
   def create
-    @weight = Weight.new(params[:weight])
-
-    respond_to do |format|
-      if @weight.save
-        format.html { redirect_to @weight, :notice => 'Weight was successfully created.' }
-        format.json { render :json => @weight, :status => :created, :location => @weight }
-      else
-        format.html { render :action => "new" }
-        format.json { render :json => @weight.errors, :status => :unprocessable_entity }
-      end
-    end
+    @option = Option.find(params[:option_id])
+    @weight = @option.weights.create(params[:weight])
+    redirect_to question_option_path(@option.question, @option)
   end
 
   # PUT /weights/1
@@ -72,12 +64,9 @@ class WeightsController < ApplicationController
   # DELETE /weights/1
   # DELETE /weights/1.json
   def destroy
-    @weight = Weight.find(params[:id])
+    @option = Option.find(params[:option_id])
+    @weight = @option.weights.find(params[:id])
     @weight.destroy
-
-    respond_to do |format|
-      format.html { redirect_to weights_url }
-      format.json { head :no_content }
-    end
+    redirect_to question_option_path(@option.question, @option)
   end
 end

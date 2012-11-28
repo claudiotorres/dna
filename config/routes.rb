@@ -15,7 +15,9 @@ Dna::Application.routes.draw do
     resources :options
   end
 
-  resources :weights
+  resources :options do
+    resources :weights
+  end
 
 
   resources :sites

@@ -1,7 +1,8 @@
 class Option < ActiveRecord::Base
   belongs_to :question
-  attr_accessible :description, :name
+  attr_accessible :description, :name, :order
 
+  validates :order,  :presence => true
   validates :description,  :presence => true
   validates :name,  :presence => true
 
