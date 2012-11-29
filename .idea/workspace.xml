@@ -2,35 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0f1bd0e-4ab5-49d3-a9de-f9b33603818f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/weights/_weight.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/diagnostic_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/diagnostic_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/options_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/options_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/weights_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/weights_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/evaluation.rb" afterPath="$PROJECT_DIR$/app/models/evaluation.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/option.rb" afterPath="$PROJECT_DIR$/app/models/option.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/question.rb" afterPath="$PROJECT_DIR$/app/models/question.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/diagnostic/show.html.erb" afterPath="$PROJECT_DIR$/app/views/diagnostic/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/evaluations/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/evaluations/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/evaluations/index.html.erb" afterPath="$PROJECT_DIR$/app/views/evaluations/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/evaluations/show.html.erb" afterPath="$PROJECT_DIR$/app/views/evaluations/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/options/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/options/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/options/_option.html.erb" afterPath="$PROJECT_DIR$/app/views/options/_option.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/options/index.html.erb" afterPath="$PROJECT_DIR$/app/views/options/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/options/show.html.erb" afterPath="$PROJECT_DIR$/app/views/options/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/questions/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/questions/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/questions/_question.html.erb" afterPath="$PROJECT_DIR$/app/views/questions/_question.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/questions/index.html.erb" afterPath="$PROJECT_DIR$/app/views/questions/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/questions/show.html.erb" afterPath="$PROJECT_DIR$/app/views/questions/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/weights/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/weights/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/weights/show.html.erb" afterPath="$PROJECT_DIR$/app/views/weights/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="dna.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,7 +29,7 @@
       <file leaf-file-name="database.yml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/database.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="2" selection-start="969" selection-end="969" vertical-scroll-proportion="0.82615894">
+            <state line="38" column="62" selection-start="958" selection-end="958" vertical-scroll-proportion="0.8427152">
               <folding />
             </state>
           </provider>
@@ -128,6 +101,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -194,18 +169,16 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="recentsLimit" value="5" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -431,7 +404,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23419774" sideWeight="0.6709062" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2382496" sideWeight="0.6709062" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -566,21 +539,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/weights_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="45" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.7682119">
-          <folding />
-        </state>
+        <state line="67" column="45" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.7682119" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/options_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="16" selection-start="1459" selection-end="1459" vertical-scroll-proportion="0.5281457">
-          <folding />
-        </state>
+        <state line="59" column="16" selection-start="1459" selection-end="1459" vertical-scroll-proportion="0.5281457" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="2" selection-start="969" selection-end="969" vertical-scroll-proportion="0.82615894">
+        <state line="38" column="62" selection-start="958" selection-end="958" vertical-scroll-proportion="0.8427152">
           <folding />
         </state>
       </provider>
