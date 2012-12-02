@@ -2,12 +2,7 @@ class SitesController < ApplicationController
   # GET /sites
   # GET /sites.json
   def index
-    @sites = Site.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render :json => @sites }
-    end
+    @site = Site.new
   end
 
   # GET /sites/1
@@ -26,10 +21,7 @@ class SitesController < ApplicationController
   def new
     @site = Site.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render :json => @site }
-    end
+    render :index
   end
 
   # GET /sites/1/edit

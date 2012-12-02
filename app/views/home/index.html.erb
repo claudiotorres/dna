@@ -23,13 +23,9 @@
       <tr>
         <td height="41">&nbsp;</td>
         <td rowspan="3">&nbsp;</td>
-        <td colspan="2" align="center" valign="middle" bgcolor="#FFFFFF">
-          <label for="textfield"></label>
-          <input name="textfield" type="text" class="site-field_home" id="textfield" value="Enter website address" size="20">
-        </td>
-        <td align="center" valign="middle" bgcolor="#FFFFFF">
-          <%= link_to (image_tag "search.gif", :size => "18x17"), :controller => "diagnostic", :action => "show", :id => "1" %>
-        </td>
+
+        <%= render 'form' %>
+
         <td>&nbsp;</td>
         <td><%= image_tag "spacer.gif", :size => "1x41" %></td>
       </tr>

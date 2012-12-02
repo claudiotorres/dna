@@ -7,6 +7,8 @@ Dna::Application.routes.draw do
 
   get "home/index"
 
+  get "site/create"
+
   resources :evaluations do
     resources :questions
   end
@@ -18,7 +20,6 @@ Dna::Application.routes.draw do
   resources :options do
     resources :weights
   end
-
 
   resources :sites
 

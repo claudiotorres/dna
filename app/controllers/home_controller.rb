@@ -1,9 +1,9 @@
 class HomeController < ApplicationController
 
   def index
-  end
 
-  def validate
+    @site = Site.new
+
   end
 
 end

@@ -1,9 +1,9 @@
 class Evaluation < ActiveRecord::Base
   attr_accessible :description, :name, :order
 
-  validates :order,  :presence => true
-  validates :description,  :presence => true
-  validates :name,  :presence => true
+  validates :order, :description, :name, :presence => true
+  validates :description, :name, :uniqueness => true
+  validates :order, :numericality => { :only_integer => true }
 
   # Associated questions and option.
   has_many :questions
