@@ -1,10 +1,9 @@
 class Answer < ActiveRecord::Base
-  belongs_to :dnatest
+  belongs_to :dnatest, :dependent => :destroy
   attr_accessible :date, :optionid, :questionid
 
-  validates :date,  :presence => true
-  validates :optionid,  :presence => true
-  validates :questionid,  :presence => true
+  # validates :optionid,  :presence => true
+  # validates :questionid,  :presence => true
 
   # Store the customer answer
   # has_one :question

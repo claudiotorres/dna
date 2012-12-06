@@ -1,10 +1,8 @@
 class Dnatest < ActiveRecord::Base
-  belongs_to :site
+  belongs_to :site, :dependent => :destroy
   attr_accessible :date, :description, :name
 
-  validates :date,  :presence => true
-  validates :description,  :presence => true
-  validates :name,  :presence => true
+  # validates :date,  :presence => true
 
   # Company information associated to the site.
   has_many :answers

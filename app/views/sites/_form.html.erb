@@ -1,14 +1,11 @@
-<%= form_for(@site) do |f| %>
+<%= form_for (@site) do |f| %>
 
+    <!-- -->
     <td colspan="2" align="center" valign="middle" bgcolor="#FFFFFF">
-      <%= f.text_field :url %>
-    </td>
-    <td align="center" valign="middle" bgcolor="#FFFFFF">
-      <%= image_submit_tag "search.gif", :size => "18x17" %>
       <% if @site.errors.any? %>
-          <div id="error_explanation">
-            <h2><%= pluralize(@site.errors.count, "error") %></h2>
-
+          <!-- -->
+          <div class="validation_error">
+            <h2>"This is not a valid site URL:"</h2>
             <ul>
               <% @site.errors.full_messages.each do |msg| %>
                   <li><%= msg %></li>
@@ -16,6 +13,12 @@
             </ul>
           </div>
       <% end %>
+      <%= f.text_field :url %>
+    </td>
+
+    <!-- -->
+    <td align="center" valign="middle" bgcolor="#FFFFFF">
+      <%= image_submit_tag "search.gif", :size => "18x17" %>
     </td>
 
 <% end %>

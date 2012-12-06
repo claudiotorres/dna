@@ -6,6 +6,9 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Emanuel', :city => cities.first)
 
+Site.delete_all
+Dnatest.delete_all
+Answer.delete_all
 Weight.delete_all
 Option.delete_all
 Question.delete_all

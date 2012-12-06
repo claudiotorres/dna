@@ -2,6 +2,7 @@ class Site < ActiveRecord::Base
   attr_accessible :description, :name, :url
 
   validates :url,  :presence => true,
+            :uniqueness => true,
             :format => { :with => URI::regexp(%w(http https))},
             :length => { :minimum => 5 }
 

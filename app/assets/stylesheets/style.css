@@ -192,3 +192,25 @@ body {
 	color: #FFFFFF;
 	background-color: #1C6093;
 }
+
+.validation_error {
+    border: none;
+}
+
+.validation_error h2 {
+    background-color: #ff0000;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+.validation_error ul {
+}
+
+.validation_error li {
+    font-family: Arial;
+    font-size: 10px;
+    font-weight: bold;
+    color: #ff0000;
+}

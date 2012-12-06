@@ -5,9 +5,7 @@ Dna::Application.routes.draw do
 
   get "diagnostic/show"
 
-  get "home/index"
-
-  get "site/create"
+  post "diagnostic/create"
 
   resources :evaluations do
     resources :questions
@@ -21,19 +19,19 @@ Dna::Application.routes.draw do
     resources :weights
   end
 
-  resources :sites
+  resources :sites do
+    resources :dnatests
+  end
+
+  resources :dnatests do
+    resources :answers
+  end
 
 
   resources :plans
 
 
   resources :features
-
-
-  resources :dnatests
-
-
-  resources :answers
 
 
   resources :dnagrades
@@ -103,7 +101,9 @@ Dna::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'home#index'
+
+  # Start from site creation.
+  root :to => 'sites#index'
 
   # See how all your routes lay out with "rake routes"
 

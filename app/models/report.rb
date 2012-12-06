@@ -1,5 +1,5 @@
 class Report < ActiveRecord::Base
-  belongs_to :site
+  belongs_to :site, :dependent => :destroy
   attr_accessible :date, :description, :name, :version
 
   validates :date,  :presence => true
